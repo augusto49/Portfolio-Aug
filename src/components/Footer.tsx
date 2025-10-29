@@ -8,15 +8,26 @@ const Footer = () => {
               © 2024 Augusto Ferreira da Silva. Todos os direitos reservados.
             </p>
           </div>
-          
+
           <div className="flex gap-4 text-sm text-muted-foreground">
-            <a href="#sobre" className="hover:text-primary transition-colors">Sobre</a>
+            <a href="#sobre" className="hover:text-primary transition-colors">
+              Sobre
+            </a>
             <span>•</span>
-            <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
+            <a href="#skills" className="hover:text-primary transition-colors">
+              Skills
+            </a>
             <span>•</span>
-            <a href="#experiencia" className="hover:text-primary transition-colors">Experiência</a>
+            <a
+              href="#experiencia"
+              className="hover:text-primary transition-colors"
+            >
+              Experiência
+            </a>
             <span>•</span>
-            <a href="#contato" className="hover:text-primary transition-colors">Contato</a>
+            <a href="#contato" className="hover:text-primary transition-colors">
+              Contato
+            </a>
           </div>
         </div>
       </div>

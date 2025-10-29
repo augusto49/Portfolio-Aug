@@ -63,10 +63,7 @@ const Contact = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold mb-1">Localização</h3>
-                    <p className="text-muted-foreground">
-                      Manaus, Amazonas
-                      <br />
-                    </p>
+                    <p className="text-muted-foreground">Manaus, Amazonas</p>
                   </div>
                 </div>
               </div>

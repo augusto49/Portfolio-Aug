@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -98,6 +97,22 @@ export default {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "scale-in": {
+          from: { transform: "scale(0.95)", opacity: "0" },
+          to: { transform: "scale(1)", opacity: "1" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(var(--primary) / 0.6)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -105,17 +120,27 @@ export default {
         float: "float 6s ease-in-out infinite",
         glow: "glow 2s ease-in-out infinite",
         "slide-up": "slide-up 0.5s ease-out",
+        "spin-slow": "spin-slow 8s linear infinite",
+        "fade-in": "fade-in 0.5s ease-out",
+        "scale-in": "scale-in 0.3s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
         "gradient-secondary": "var(--gradient-secondary)",
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-rainbow": "var(--gradient-rainbow)",
+        "gradient-conic": "var(--gradient-conic)",
       },
       boxShadow: {
         glow: "var(--shadow-glow)",
         card: "var(--shadow-card)",
+        "primary-glow": "var(--shadow-primary-glow)",
+        "accent-glow": "var(--shadow-accent-glow)",
+        "secondary-glow": "var(--shadow-secondary-glow)",
+        "card-hover": "var(--shadow-card-hover)",
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
