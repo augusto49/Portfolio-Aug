@@ -115,7 +115,7 @@ const Experience = () => {
                   </motion.div>
 
                   <motion.div
-                    className="md:ml-20 glass-card card-rainbow rounded-xl p-6 md:p-8 hover:shadow-card-hover transition-all"
+                    className="md:ml-20 glass-card card-rainbow rounded-xl p-6 md:p-8 radar-pulse transition-all"
                     whileHover={{ y: -5, x: 5 }}
                   >
                     <div className="space-y-4">

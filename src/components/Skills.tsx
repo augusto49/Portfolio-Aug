@@ -10,7 +10,7 @@ const skillCategories = [
     color: "text-primary",
     skills: [
       { name: "Flutter/Dart", level: 90 },
-      { name: "React Native", level: 85 },
+      { name: "React Native", level: 75 },
       { name: "Firebase", level: 80 },
       { name: "GetX", level: 85 },
       { name: "MobX", level: 75 },
@@ -23,9 +23,9 @@ const skillCategories = [
     color: "text-secondary",
     skills: [
       { name: "React", level: 88 },
-      { name: "TypeScript", level: 85 },
-      { name: "JavaScript", level: 90 },
-      { name: "Next.js", level: 82 },
+      { name: "TypeScript", level: 90 },
+      { name: "JavaScript", level: 75 },
+      { name: "Next.js", level: 67 },
       { name: "HTML/CSS", level: 92 },
       { name: "Bootstrap", level: 85 },
     ],
@@ -38,7 +38,7 @@ const skillCategories = [
       { name: "Python", level: 88 },
       { name: "Django REST", level: 85 },
       { name: "Node.js", level: 80 },
-      { name: "GraphQL", level: 75 },
+      { name: "GraphQL", level: 55 },
       { name: "REST APIs", level: 90 },
     ],
   },
@@ -154,7 +154,7 @@ const Skills = () => {
               return (
                 <motion.div
                   key={idx}
-                  className="glass-card card-rainbow rounded-xl p-6 space-y-4 hover:shadow-card-hover transition-all"
+                  className="glass-card card-rainbow rounded-xl p-6 space-y-4 radar-pulse transition-all"
                   initial={{ opacity: 0, y: 30 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: idx * 0.1 + 0.4 }}
@@ -204,7 +204,7 @@ const Skills = () => {
               ].map((skill, idx) => (
                 <motion.span
                   key={idx}
-                  className="px-4 py-2 bg-background/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium hover-scale"
+                  className="px-4 py-2 bg-background/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-medium radar-pulse-button"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.9 + idx * 0.05 }}

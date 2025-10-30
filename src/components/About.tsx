@@ -39,7 +39,7 @@ const About = () => {
           </div>
 
           <motion.div
-            className="glass-card card-rainbow rounded-2xl p-8 md:p-12 hover:shadow-card-hover transition-all"
+            className="glass-card card-rainbow rounded-2xl p-8 md:p-12 radar-pulse transition-all"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
@@ -88,7 +88,7 @@ const About = () => {
             ].map((stat, idx) => (
               <motion.div
                 key={idx}
-                className="glass-card card-rainbow rounded-xl p-6 hover:shadow-card-hover transition-all text-center"
+                className="glass-card card-rainbow rounded-xl p-6 radar-pulse transition-all text-center"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: stat.delay }}

@@ -112,7 +112,7 @@ const Hero = () => {
               ].map((tech) => (
                 <motion.span
                   key={tech}
-                  className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium hover-scale"
+                  className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium radar-pulse-button"
                   whileHover={{ scale: 1.05 }}
                 >
                   {tech}
@@ -122,73 +122,7 @@ const Hero = () => {
 
             {/* Action Buttons - Icon only except CV */}
             <div className="flex flex-wrap gap-4 justify-center">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a href="#contato">
-                    <motion.div
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button
-                        size="lg"
-                        className="gap-2 shadow-primary-glow hover:shadow-accent-glow transition-shadow"
-                      >
-                        <Mail className="h-5 w-5" />
-                      </Button>
-                    </motion.div>
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Entrar em Contato</p>
-                </TooltipContent>
-              </Tooltip>
-
-              <a
-                href="/Augusto_Ferreira_da_Silva_CV.pdf"
-                download="Augusto_Ferreira_Silva_CV.pdf"
-              >
-                <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="gap-2 border-accent/50 hover:bg-accent/10"
-                  >
-                    <Download className="h-5 w-5" />
-                    <span className="hidden sm:inline">Baixar CV</span>
-                    <span className="sm:hidden">CV</span>
-                  </Button>
-                </motion.div>
-              </a>
-
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href="https://www.linkedin.com/in/augusto-ferreira-76810b190"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button
-                        size="lg"
-                        variant="secondary"
-                        className="gap-2 shadow-secondary-glow"
-                      >
-                        <Linkedin className="h-5 w-5" />
-                      </Button>
-                    </motion.div>
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>LinkedIn</p>
-                </TooltipContent>
-              </Tooltip>
-
+              {/* GitHub Button */}
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
@@ -203,7 +137,7 @@ const Hero = () => {
                       <Button
                         size="lg"
                         variant="outline"
-                        className="gap-2 border-primary/50 hover:bg-primary/10"
+                        className="border-border radar-pulse-button transition-colors"
                       >
                         <Github className="h-5 w-5" />
                       </Button>
@@ -214,6 +148,77 @@ const Hero = () => {
                   <p>GitHub</p>
                 </TooltipContent>
               </Tooltip>
+
+              {/* Email Button */}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href="#contato">
+                    <motion.div
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        className="border-border radar-pulse-button transition-colors"
+                      >
+                        <Mail className="h-5 w-5" />
+                      </Button>
+                    </motion.div>
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Entrar em Contato</p>
+                </TooltipContent>
+              </Tooltip>
+
+              {/* LinkedIn Button */}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://www.linkedin.com/in/augusto-ferreira-76810b190"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        className="border-border radar-pulse-button transition-colors"
+                      >
+                        <Linkedin className="h-5 w-5" />
+                      </Button>
+                    </motion.div>
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>LinkedIn</p>
+                </TooltipContent>
+              </Tooltip>
+
+              {/* Download CV Button */}
+              <a
+                href="/Augusto_Ferreira_da_Silva_CV.pdf"
+                download="Augusto_Ferreira_Silva_CV.pdf"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="gap-2 border-accent/50 radar-pulse-button transition-colors"
+                  >
+                    <Download className="h-5 w-5" />
+                    <span className="hidden sm:inline">Baixar CV</span>
+                    <span className="sm:hidden">CV</span>
+                  </Button>
+                </motion.div>
+              </a>
             </div>
           </div>
 
@@ -276,7 +281,7 @@ const Hero = () => {
                 ].map((tech) => (
                   <motion.span
                     key={tech}
-                    className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium hover-scale"
+                    className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium radar-pulse-button"
                     whileHover={{ scale: 1.05 }}
                   >
                     {tech}
@@ -286,72 +291,7 @@ const Hero = () => {
 
               {/* Action Buttons - Icon only except CV */}
               <div className="flex flex-wrap gap-4">
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a href="#contato">
-                      <motion.div
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Button
-                          size="lg"
-                          className="gap-2 shadow-primary-glow hover:shadow-accent-glow transition-shadow"
-                        >
-                          <Mail className="h-5 w-5" />
-                        </Button>
-                      </motion.div>
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Entrar em Contato</p>
-                  </TooltipContent>
-                </Tooltip>
-
-                <a
-                  href="/Augusto_Ferreira_da_Silva_CV.pdf"
-                  download="Augusto_Ferreira_Silva_CV.pdf"
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="gap-2 border-accent/50 hover:bg-accent/10"
-                    >
-                      <Download className="h-5 w-5" />
-                      Baixar CV
-                    </Button>
-                  </motion.div>
-                </a>
-
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <a
-                      href="https://www.linkedin.com/in/augusto-ferreira-76810b190"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <motion.div
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Button
-                          size="lg"
-                          variant="secondary"
-                          className="gap-2 shadow-secondary-glow"
-                        >
-                          <Linkedin className="h-5 w-5" />
-                        </Button>
-                      </motion.div>
-                    </a>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>LinkedIn</p>
-                  </TooltipContent>
-                </Tooltip>
-
+                {/* GitHub Button */}
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a
@@ -366,7 +306,7 @@ const Hero = () => {
                         <Button
                           size="lg"
                           variant="outline"
-                          className="gap-2 border-primary/50 hover:bg-primary/10"
+                          className="border-border radar-pulse-button transition-colors"
                         >
                           <Github className="h-5 w-5" />
                         </Button>
@@ -377,20 +317,90 @@ const Hero = () => {
                     <p>GitHub</p>
                   </TooltipContent>
                 </Tooltip>
+
+                {/* Email Button */}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a href="#contato">
+                      <motion.div
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="border-border radar-pulse-button transition-colors"
+                        >
+                          <Mail className="h-5 w-5" />
+                        </Button>
+                      </motion.div>
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Entrar em Contato</p>
+                  </TooltipContent>
+                </Tooltip>
+
+                {/* LinkedIn Button */}
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      href="https://www.linkedin.com/in/augusto-ferreira-76810b190"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <motion.div
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Button
+                          size="lg"
+                          variant="outline"
+                          className="border-border radar-pulse-button transition-colors"
+                        >
+                          <Linkedin className="h-5 w-5" />
+                        </Button>
+                      </motion.div>
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>LinkedIn</p>
+                  </TooltipContent>
+                </Tooltip>
+
+                {/* Download CV Button */}
+                <a
+                  href="/Augusto_Ferreira_da_Silva_CV.pdf"
+                  download="Augusto_Ferreira_Silva_CV.pdf"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="gap-2 border-accent/50 radar-pulse-button transition-colors"
+                    >
+                      <Download className="h-5 w-5" />
+                      Baixar CV
+                    </Button>
+                  </motion.div>
+                </a>
               </div>
 
               {/* Contact Info */}
               <div className="flex gap-6 pt-4 text-muted-foreground">
                 <a
                   href="tel:+5592992107783"
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
+                  className="flex items-center gap-2 hover:text-foreground transition-colors"
                 >
                   <Phone className="h-4 w-4" />
                   <span className="text-sm">(92) 9 9210-7783</span>
                 </a>
                 <a
                   href="mailto:ferreiraaugusto918@gmail.com"
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
+                  className="flex items-center gap-2 hover:text-foreground transition-colors"
                 >
                   <Mail className="h-4 w-4" />
                   <span className="text-sm">ferreiraaugusto918@gmail.com</span>

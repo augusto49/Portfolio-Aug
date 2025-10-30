@@ -74,7 +74,7 @@ const Education = () => {
                 ].map((course, idx) => (
                   <div
                     key={idx}
-                    className="p-4 bg-muted/50 rounded-lg hover:bg-muted transition-all"
+                    className="p-4 bg-muted/50 rounded-lg radar-pulse transition-all"
                   >
                     <h4 className="font-semibold mb-1">{course.name}</h4>
                     <p className="text-sm text-muted-foreground">
