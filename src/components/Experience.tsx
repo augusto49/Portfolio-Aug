@@ -1,4 +1,11 @@
-import { Briefcase, Calendar } from "lucide-react";
+import {
+  Briefcase,
+  Calendar,
+  MapPin,
+  Smartphone,
+  Code2,
+  Server,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -6,44 +13,86 @@ const experiences = [
   {
     title: "Desenvolvedor Full Stack & Mobile",
     company: "Grupo Rede Amazônica",
-    period: "nov/2022 - nov/2024",
+    period: "Nov/2022 - Nov/2024",
+    location: "Manaus - AM",
     description:
-      "Desenvolvimento de aplicativo híbrido Flutter/Dart com arquitetura MVC, integrando API GraphQL, Firebase e Google Maps. Publicação nas lojas Play Store e App Store.",
-    highlights: [
-      "Mobile: Flutter + Dart, GetX, Firebase, Google Maps API",
-      "Web: Django (MVT), React.js, Next.js, APIs REST",
-      "Funcionalidades: cadastro, mídia, denúncias, WebView",
-      "Relatórios automatizados com Pandas/Excel",
+      "Desenvolvimento de aplicativo híbrido Flutter/Dart com arquitetura MVC, integrando plataforma de notícias colaborativa com funcionalidades de rede social.",
+    sections: [
+      {
+        title: "Desenvolvimento Mobile",
+        icon: Smartphone,
+        items: [
+          "Desenvolvimento de aplicativo híbrido com Flutter/Dart, integrando plataforma de notícias colaborativa com funcionalidades de rede social",
+          "Implementação de arquitetura MVC com gerenciamento de estado GetX",
+          "Integração com API GraphQL para consumo de dados dinâmicos",
+          "Configuração e integração do Firebase para notificações push e analytics",
+          "Integração com Google Maps API para funcionalidades de geolocalização",
+          "Desenvolvimento de funcionalidades completas: sistema de cadastro, upload de mídia, sistema de denúncias, WebView embarcado, bloqueio de usuários",
+          "Responsável pela publicação e atualização nas lojas Play Store e App Store",
+          "Desenvolvimento paralelo em React Native para projetos específicos",
+        ],
+      },
+      {
+        title: "Desenvolvimento Full Stack",
+        icon: Code2,
+        items: [
+          "Desenvolvimento de backend robusto utilizando Django com arquitetura MVT",
+          "Criação de APIs REST para integração com aplicativos mobile e frontend",
+          "Desenvolvimento de frontend responsivo com React.js e Next.js",
+          "Implementação de requisições AJAX e Bootstrap para interfaces dinâmicas",
+          "Desenvolvimento de funcionalidades web: sistema de denúncias, enquetes interativas, painel administrativo de notícias",
+          "Automação de relatórios gerenciais utilizando Pandas e exportação para Excel",
+          "Manutenção e evolução de sistemas legados",
+        ],
+      },
     ],
   },
   {
-    title: "Suporte T.I - Estágio",
+    title: "Estagiário de Suporte T.I",
     company: "Grupo Rede Amazônica",
-    period: "dez/2021 - nov/2022",
+    period: "Dez/2021 - Nov/2022",
+    location: "Manaus - AM",
     description:
       "Suporte técnico, manutenção de equipamentos e sistemas, uso de GLPI e Active Directory.",
-    highlights: [
-      "Suporte técnico e manutenção",
-      "Uso de GLPI e Active Directory",
-      "Montagem e reparo de equipamentos",
+    sections: [
+      {
+        title: "Responsabilidades",
+        icon: Server,
+        items: [
+          "Suporte técnico presencial e remoto aos colaboradores",
+          "Manutenção preventiva e corretiva de equipamentos de informática",
+          "Gestão de chamados através do sistema GLPI",
+          "Administração de usuários e permissões no Active Directory",
+          "Montagem, configuração e reparo de computadores e periféricos",
+          "Suporte em infraestrutura de rede e telecomunicações",
+        ],
+      },
     ],
   },
   {
-    title: "Desenvolvedor Web - Estágio",
-    company: "ADAF - Agência de Defesa Agropecuária",
-    period: "nov - dez/2021",
+    title: "Desenvolvedor Web - Estagiário",
+    company: "Agência de Defesa Agropecuária e Florestal (ADAF)",
+    period: "Nov/2021 - Dez/2021",
+    location: "Manaus - AM",
     description:
       "Desenvolvimento e manutenção do site institucional, configuração de hospedagem e back-end.",
-    highlights: [
-      "Desenvolvimento do site institucional",
-      "Configuração de hospedagem",
-      "Manutenção de back-end simples",
+    sections: [
+      {
+        title: "Responsabilidades",
+        icon: Code2,
+        items: [
+          "Desenvolvimento e manutenção do site institucional da ADAF",
+          "Atualização de conteúdo e implementação de novas funcionalidades",
+          "Configuração de hospedagem web e manutenção de back-end",
+          "Otimização de performance e responsividade do site",
+        ],
+      },
     ],
   },
 ];
 
 const Experience = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
 
   return (
     <section id="experiencia" className="py-20 px-6">
@@ -64,7 +113,7 @@ const Experience = () => {
             >
               <Briefcase className="h-4 w-4 text-primary" />
               <span className="text-sm font-medium text-primary">
-                Experiência
+                Trajetória
               </span>
             </motion.div>
             <motion.h2
@@ -118,7 +167,8 @@ const Experience = () => {
                     className="md:ml-20 glass-card card-rainbow rounded-xl p-6 md:p-8 radar-pulse transition-all"
                     whileHover={{ y: -5, x: 5 }}
                   >
-                    <div className="space-y-4">
+                    <div className="space-y-6">
+                      {/* Header */}
                       <div>
                         <h3 className="text-2xl font-bold mb-2">{exp.title}</h3>
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground">
@@ -130,29 +180,47 @@ const Experience = () => {
                             <Calendar className="h-4 w-4" />
                             {exp.period}
                           </span>
+                          <span className="hidden sm:inline">•</span>
+                          <span className="flex items-center gap-2 text-sm">
+                            <MapPin className="h-4 w-4" />
+                            {exp.location}
+                          </span>
                         </div>
                       </div>
 
-                      <p className="text-muted-foreground leading-relaxed">
-                        {exp.description}
-                      </p>
-
-                      <div className="space-y-2">
-                        {exp.highlights.map((highlight, hIdx) => (
-                          <motion.div
-                            key={hIdx}
-                            className="flex items-start gap-2"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={inView ? { opacity: 1, x: 0 } : {}}
-                            transition={{ delay: idx * 0.2 + hIdx * 0.1 + 1 }}
-                          >
-                            <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground">
-                              {highlight}
-                            </span>
-                          </motion.div>
-                        ))}
-                      </div>
+                      {/* Sections */}
+                      {exp.sections.map((section, sIdx) => {
+                        const Icon = section.icon;
+                        return (
+                          <div key={sIdx} className="space-y-3">
+                            <div className="flex items-center gap-2">
+                              <Icon className="h-5 w-5 text-secondary" />
+                              <h4 className="font-semibold text-lg text-secondary">
+                                {section.title}
+                              </h4>
+                            </div>
+                            <div className="space-y-2 pl-7">
+                              {section.items.map((item, iIdx) => (
+                                <motion.div
+                                  key={iIdx}
+                                  className="flex items-start gap-2"
+                                  initial={{ opacity: 0, x: -10 }}
+                                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                                  transition={{
+                                    delay:
+                                      idx * 0.2 + sIdx * 0.1 + iIdx * 0.03 + 1,
+                                  }}
+                                >
+                                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                                  <span className="text-sm text-muted-foreground">
+                                    {item}
+                                  </span>
+                                </motion.div>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   </motion.div>
                 </motion.div>

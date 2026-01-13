@@ -96,9 +96,13 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-base text-muted-foreground max-w-md">
-              3+ anos de experiência em Flutter, React.js e React Native,
-              Python/Django e desenvolvimento web. Especializado em criar
-              aplicações completas desde o conceito até o deploy.
+              Sou desenvolvedor Full Stack com ênfase em Mobile, com 3+ anos de
+              experiência prática em Flutter/Dart e projetos web, atuando também
+              com React Native, Next.js e backend com Python/Django e Node.js.
+              Tenho vivência em projetos completos, desde o desenvolvimento até
+              o deploy, incluindo publicação nas lojas (Play Store e App Store),
+              consumo de APIs REST e GraphQL, versionamento com Git, integração
+              com Firebase e uso de bancos relacionais.
             </p>
 
             {/* Tech Stack Badges */}
@@ -201,8 +205,8 @@ const Hero = () => {
 
               {/* Download CV Button */}
               <a
-                href="/Augusto_Ferreira_da_Silva_CV.pdf"
-                download="Augusto_Ferreira_Silva_CV.pdf"
+                href="/Augusto Ferreira da Silva.pdf"
+                download="Augusto_Ferreira_da_Silva_CV.pdf"
               >
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
@@ -265,9 +269,14 @@ const Hero = () => {
 
               {/* Description */}
               <p className="text-lg text-muted-foreground max-w-2xl">
-                3+ anos de experiência em Flutter, React.js e React Native,
-                Python/Django e desenvolvimento web. Especializado em criar
-                aplicações completas desde o conceito até o deploy.
+                Sou desenvolvedor Full Stack com ênfase em Mobile, com 3+ anos
+                de experiência prática em Flutter/Dart e projetos web, atuando
+                também com React Native, Next.js e backend com Python/Django e
+                Node.js. Tenho vivência em projetos completos, desde o
+                desenvolvimento até o deploy, incluindo publicação nas lojas
+                (Play Store e App Store), consumo de APIs REST e GraphQL,
+                versionamento com Git, integração com Firebase e uso de bancos
+                relacionais.
               </p>
 
               {/* Tech Stack Badges */}
@@ -370,8 +379,8 @@ const Hero = () => {
 
                 {/* Download CV Button */}
                 <a
-                  href="/Augusto_Ferreira_da_Silva_CV.pdf"
-                  download="Augusto_Ferreira_Silva_CV.pdf"
+                  href="/Augusto Ferreira da Silva.pdf"
+                  download="Augusto_Ferreira_da_Silva_CV.pdf"
                 >
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
@@ -410,9 +419,9 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator - hidden on mobile */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >

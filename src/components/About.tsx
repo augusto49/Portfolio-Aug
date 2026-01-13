@@ -46,22 +46,37 @@ const About = () => {
             whileHover={{ y: -5 }}
           >
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Sou desenvolvedor Full Stack com ênfase em Mobile, com{" "}
+              Minha jornada na programação começou durante a graduação em{" "}
               <span className="text-primary font-semibold">
-                3+ anos de experiência prática
-              </span>{" "}
-              em Flutter/Dart e projetos web, atuando também com React.js e
-              React Native, Next.js e backend com Python/Django e Node.js.
+                Engenharia da Computação
+              </span>
+              , onde descobri minha paixão por transformar ideias em soluções
+              digitais. Hoje, atuo como{" "}
+              <span className="text-secondary font-semibold">
+                desenvolvedor Full Stack
+              </span>
+              , criando soluções completas em sistemas web, mobile e backend,
+              entregando aplicações de alta qualidade para diversas plataformas.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mt-6">
-              Tenho vivência em projetos completos, desde o desenvolvimento até
-              o deploy, incluindo{" "}
-              <span className="text-secondary font-semibold">
-                publicação nas lojas
+              Ao longo dos anos, tive a oportunidade de trabalhar em projetos
+              desafiadores no{" "}
+              <span className="text-primary font-semibold">
+                Grupo Rede Amazônica
+              </span>
+              , desenvolvendo aplicativos híbridos com Flutter, sistemas web com
+              React e Django, e automatizando processos internos. Essa
+              experiência me proporcionou uma visão completa do ciclo de
+              desenvolvimento de software.
+            </p>
+            <p className="text-lg leading-relaxed text-muted-foreground mt-6">
+              Busco sempre{" "}
+              <span className="text-accent font-semibold">
+                código limpo, arquitetura sólida
               </span>{" "}
-              (Play Store e App Store), consumo de APIs REST e GraphQL,
-              versionamento com Git, integração com Firebase e uso de bancos
-              relacionais.
+              e soluções que façam diferença no dia a dia dos usuários. Estou
+              disponível para novos desafios e projetos que me permitam crescer
+              como profissional e contribuir com resultados reais.
             </p>
           </motion.div>
 
