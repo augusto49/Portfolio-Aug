@@ -105,15 +105,15 @@ const AdditionalInfo = () => {
                     {info.items.map((item, iIdx) => (
                       <motion.div
                         key={iIdx}
-                        className="flex justify-between items-center text-sm"
+                        className="flex justify-between items-start text-sm gap-4"
                         initial={{ opacity: 0, x: -10 }}
                         animate={inView ? { opacity: 1, x: 0 } : {}}
                         transition={{ delay: idx * 0.1 + iIdx * 0.05 + 0.5 }}
                       >
-                        <span className="text-muted-foreground">
+                        <span className="text-muted-foreground shrink-0 mt-0.5">
                           {item.label}
                         </span>
-                        <span className="font-medium text-primary">
+                        <span className="font-medium text-primary text-right">
                           {item.value}
                         </span>
                       </motion.div>
