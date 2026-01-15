@@ -56,7 +56,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           {/* Mobile Layout - Vertical */}
-          <div className="md:hidden flex flex-col items-center text-center space-y-8">
+          <div className="md:hidden flex flex-col items-center text-center space-y-8 pt-16">
             {/* Profile Picture with Holographic Border */}
             <motion.div
               className="relative group"
