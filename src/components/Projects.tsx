@@ -1,7 +1,24 @@
-import { ExternalLink, Github, Briefcase, Globe } from "lucide-react";
+import { ExternalLink, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
+import {
+  SiReact,
+  SiTypescript,
+  SiPython,
+  SiDjango,
+  SiPostgresql,
+} from "react-icons/si";
+
+// Map technology names to their icons and colors
+const techIcons: Record<string, { icon: React.ElementType; color: string }> = {
+  React: { icon: SiReact, color: "#61DAFB" },
+  TypeScript: { icon: SiTypescript, color: "#3178C6" },
+  Python: { icon: SiPython, color: "#3776AB" },
+  Django: { icon: SiDjango, color: "#092E20" },
+  "Django REST": { icon: SiDjango, color: "#092E20" },
+  PostgreSQL: { icon: SiPostgresql, color: "#4169E1" },
+};
 
 const projects = [
   {
@@ -9,7 +26,7 @@ const projects = [
     subtitle: "Sistema Imobiliário Completo",
     description:
       "Plataforma completa para imobiliária com listagem de imóveis, busca avançada, dashboard administrativo, gestão de clientes e integração de contato.",
-    image: "https://ndutraimobiliaria.com/og-image.jpg", // You can replace with actual screenshot
+    image: "https://ndutraimobiliaria.com/og-image.jpg",
     liveUrl: "https://ndutraimobiliaria.com",
     technologies: [
       "React",
@@ -88,29 +105,46 @@ const Projects = () => {
                 transition={{ delay: idx * 0.2 + 0.5 }}
                 whileHover={{ y: -5 }}
               >
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-0">
                   {/* Project Image/Preview */}
-                  <div className="relative h-64 md:h-auto overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <Globe className="h-16 w-16 text-primary/50 mx-auto mb-4" />
-                        <p className="text-lg font-semibold text-primary">
-                          {project.title}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {project.subtitle}
-                        </p>
-                      </div>
-                    </div>
-                    {/* Decorative elements */}
+                  <div className="relative h-64 md:h-full min-h-[300px] overflow-hidden group">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        // Fallback to gradient if image fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = "none";
+                        target.parentElement?.classList.add(
+                          "bg-gradient-to-br",
+                          "from-primary/30",
+                          "to-secondary/30"
+                        );
+                      }}
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+
+                    {/* Type Badge */}
                     <motion.div
                       className="absolute top-4 right-4 px-3 py-1 bg-accent/20 backdrop-blur-sm rounded-full text-xs font-medium text-accent border border-accent/30"
                       initial={{ opacity: 0, x: 20 }}
                       animate={inView ? { opacity: 1, x: 0 } : {}}
                       transition={{ delay: 0.8 }}
                     >
-                      {project.type}
+                      {project.type} • {project.year}
                     </motion.div>
+
+                    {/* Project Title on Image (Mobile) */}
+                    <div className="absolute bottom-4 left-4 md:hidden">
+                      <h3 className="text-xl font-bold text-white">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-white/70">
+                        {project.subtitle}
+                      </p>
+                    </div>
                   </div>
 
                   {/* Project Info */}
@@ -119,32 +153,43 @@ const Projects = () => {
                     <div>
                       <div className="flex items-center gap-3 mb-2">
                         <h3 className="text-2xl font-bold">{project.title}</h3>
-                        <span className="text-sm text-muted-foreground">
-                          {project.year}
-                        </span>
                       </div>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {project.subtitle}
+                      </p>
                       <p className="text-muted-foreground">
                         {project.description}
                       </p>
                     </div>
 
-                    {/* Technologies */}
+                    {/* Technologies with Icons */}
                     <div>
-                      <h4 className="text-sm font-semibold text-secondary mb-2">
+                      <h4 className="text-sm font-semibold text-secondary mb-3">
                         Tecnologias
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, tIdx) => (
-                          <motion.span
-                            key={tIdx}
-                            className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs font-medium"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={inView ? { opacity: 1, scale: 1 } : {}}
-                            transition={{ delay: tIdx * 0.05 + 0.7 }}
-                          >
-                            {tech}
-                          </motion.span>
-                        ))}
+                        {project.technologies.map((tech, tIdx) => {
+                          const techIcon = techIcons[tech];
+                          const IconComponent = techIcon?.icon;
+                          return (
+                            <motion.span
+                              key={tIdx}
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-xs font-medium"
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={inView ? { opacity: 1, scale: 1 } : {}}
+                              transition={{ delay: tIdx * 0.05 + 0.7 }}
+                              whileHover={{ scale: 1.05 }}
+                            >
+                              {IconComponent && (
+                                <IconComponent
+                                  className="h-3.5 w-3.5"
+                                  style={{ color: techIcon.color }}
+                                />
+                              )}
+                              {tech}
+                            </motion.span>
+                          );
+                        })}
                       </div>
                     </div>
 

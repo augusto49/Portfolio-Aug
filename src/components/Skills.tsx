@@ -2,6 +2,48 @@ import { Code2, Database, Smartphone, Server } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
+import {
+  SiFlutter,
+  SiReact,
+  SiFirebase,
+  SiTypescript,
+  SiJavascript,
+  SiNextdotjs,
+  SiHtml5,
+  SiBootstrap,
+  SiPython,
+  SiDjango,
+  SiNodedotjs,
+  SiGraphql,
+  SiMysql,
+  SiPostgresql,
+} from "react-icons/si";
+import { TbBrandReactNative, TbApi } from "react-icons/tb";
+import { DiMsqlServer } from "react-icons/di";
+
+// Map skill names to their icons and colors
+const skillIcons: Record<string, { icon: React.ElementType; color: string }> = {
+  "Flutter/Dart": { icon: SiFlutter, color: "#02569B" },
+  "React Native": { icon: TbBrandReactNative, color: "#61DAFB" },
+  Firebase: { icon: SiFirebase, color: "#FFCA28" },
+  GetX: { icon: SiFlutter, color: "#8B5CF6" },
+  MobX: { icon: SiReact, color: "#FF9955" },
+  Modular: { icon: SiFlutter, color: "#02569B" },
+  React: { icon: SiReact, color: "#61DAFB" },
+  TypeScript: { icon: SiTypescript, color: "#3178C6" },
+  JavaScript: { icon: SiJavascript, color: "#F7DF1E" },
+  "Next.js": { icon: SiNextdotjs, color: "#FFFFFF" },
+  "HTML/CSS": { icon: SiHtml5, color: "#E34F26" },
+  Bootstrap: { icon: SiBootstrap, color: "#7952B3" },
+  Python: { icon: SiPython, color: "#3776AB" },
+  "Django REST": { icon: SiDjango, color: "#092E20" },
+  "Node.js": { icon: SiNodedotjs, color: "#339933" },
+  GraphQL: { icon: SiGraphql, color: "#E10098" },
+  "REST APIs": { icon: TbApi, color: "#6366F1" },
+  MySQL: { icon: SiMysql, color: "#4479A1" },
+  PostgreSQL: { icon: SiPostgresql, color: "#4169E1" },
+  "SQL Server": { icon: DiMsqlServer, color: "#CC2927" },
+};
 
 const skillCategories = [
   {
@@ -67,6 +109,9 @@ const SkillProgress = ({
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
   const [count, setCount] = useState(0);
 
+  const skillIcon = skillIcons[name];
+  const IconComponent = skillIcon?.icon;
+
   useEffect(() => {
     if (inView) {
       let start = 0;
@@ -97,7 +142,15 @@ const SkillProgress = ({
       transition={{ delay, duration: 0.5 }}
     >
       <div className="flex justify-between items-center">
-        <span className="text-sm font-medium">{name}</span>
+        <div className="flex items-center gap-2">
+          {IconComponent && (
+            <IconComponent
+              className="h-4 w-4"
+              style={{ color: skillIcon.color }}
+            />
+          )}
+          <span className="text-sm font-medium">{name}</span>
+        </div>
         <span className="text-sm font-bold text-primary">{count}%</span>
       </div>
       <div className="h-2 bg-muted rounded-full overflow-hidden">

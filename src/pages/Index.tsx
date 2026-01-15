@@ -13,6 +13,7 @@ import DotNavigation from "@/components/DotNavigation";
 import ScrollProgress from "@/components/ScrollProgress";
 import Navbar from "@/components/Navbar";
 import CursorTrail from "@/components/CursorTrail";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <CursorTrail />
       <ScrollProgress />
       <DotNavigation />
+      <ScrollToTop />
       <Hero />
       <About />
       <Skills />
