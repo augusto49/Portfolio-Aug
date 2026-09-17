@@ -9,7 +9,57 @@ import {
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+const calculateDuration = (startDate: Date) => {
+  const now = new Date();
+  let months = (now.getFullYear() - startDate.getFullYear()) * 12;
+  months -= startDate.getMonth();
+  months += now.getMonth();
+  
+  // Contagem inclusiva (ex: Abril a Setembro = 6 meses)
+  months += 1;
+
+  if (months < 1) return "Menos de 1 mês";
+  if (months === 1) return "1 mês";
+  if (months < 12) return `${months} meses`;
+  
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+  
+  let result = years === 1 ? "1 ano" : `${years} anos`;
+  if (remainingMonths === 1) result += " e 1 mês";
+  else if (remainingMonths > 1) result += ` e ${remainingMonths} meses`;
+  
+  return result;
+};
+
 const experiences = [
+  {
+    title: "Desenvolvedor Mobile (PJ)",
+    company: "Hammer Consult",
+    period: "Abr/2026 - o momento",
+    duration: calculateDuration(new Date(2026, 3, 1)), // 3 = Abril
+    location: "Remoto",
+    description: "Atuação principal no desenvolvimento e evolução do ecossistema mobile do projeto Samae, com interações e suporte esporádico ao backend e DevOps.",
+    sections: [
+      {
+        title: "Desenvolvimento Mobile",
+        icon: Smartphone,
+        items: [
+          "Construção de aplicativo multiplataforma (Android, iOS, Web e Desktop) para gestão de Ordens de Serviço utilizando Flutter e Dart",
+          "Desenvolvimento de aplicativos híbridos para atendimento digital e coleta de dados utilizando TypeScript, Angular, Ionic e Capacitor"
+        ],
+      },
+      {
+        title: "Suporte Backend & DevOps",
+        icon: Code2,
+        items: [
+          "Atuação pontual na manutenção de portais corporativos e APIs utilizando C#, .NET Framework e ASP.NET MVC",
+          "Suporte esporádico na modelagem e consumo de dados utilizando Oracle (ODP.NET) e SQL Server",
+          "Acompanhamento e suporte nas esteiras de CI/CD (Azure DevOps e Codemagic) para automação de builds e deploys"
+        ],
+      }
+    ],
+  },
   {
     title: "Desenvolvedor Full Stack & Mobile",
     company: "Grupo Rede Amazônica",
@@ -80,6 +130,37 @@ const experiences = [
           "Desenvolvimento e manutenção do site institucional da ADAF",
           "Atualização de conteúdo e implementação de novas funcionalidades",
           "Configuração de hospedagem web e manutenção de back-end",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Desenvolvedor Full Stack & Consultor de TI",
+    company: "Autônomo (Empresa Própria)",
+    period: "Jan/2019 - Mai/2022",
+    duration: "3 anos e 5 meses",
+    location: "Manaus - AM",
+    description:
+      "Atuação autônoma oferecendo soluções completas em TI, gerenciando todo o ciclo de vida dos projetos, desde a prospecção até o suporte pós-venda.",
+    sections: [
+      {
+        title: "Serviços de Desenvolvimento",
+        icon: Code2,
+        items: [
+          "Desenvolvimento de sistemas web (full stack) com Python/Django, React.js, Next.js e TypeScript",
+          "Desenvolvimento de aplicativos mobile híbridos com Flutter/Dart para Android e iOS",
+          "Criação de sites institucionais, e-commerces e integração com APIs REST e meios de pagamento",
+          "Modelagem de banco de dados e arquitetura de soluções escaláveis",
+          "Projeto destaque: Site Ndutra Imobiliária (desenvolvimento full stack completo até deploy em produção)",
+        ],
+      },
+      {
+        title: "Infraestrutura & Suporte",
+        icon: Server,
+        items: [
+          "Consultoria técnica em infraestrutura de TI para pequenas e médias empresas",
+          "Montagem, configuração e manutenção de redes, computadores e servidores (Windows e Linux)",
+          "Suporte técnico presencial/remoto, backup, recuperação de dados e migração de sistemas",
         ],
       },
     ],

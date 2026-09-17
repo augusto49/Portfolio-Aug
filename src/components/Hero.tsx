@@ -96,7 +96,7 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-base text-muted-foreground max-w-md">
-              Sou desenvolvedor Full Stack com ênfase em Mobile, com 3+ anos de
+              Sou desenvolvedor Full Stack com ênfase em Mobile, com 6+ anos de
               experiência prática em Flutter/Dart e projetos web, atuando também
               com React Native, Next.js e backend com Python/Django e Node.js.
               Tenho vivência em projetos completos, desde o desenvolvimento até
@@ -269,7 +269,7 @@ const Hero = () => {
 
               {/* Description */}
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Sou desenvolvedor Full Stack com ênfase em Mobile, com 3+ anos
+                Sou desenvolvedor Full Stack com ênfase em Mobile, com 6+ anos
                 de experiência prática em Flutter/Dart e projetos web, atuando
                 também com React Native, Next.js e backend com Python/Django e
                 Node.js. Tenho vivência em projetos completos, desde o

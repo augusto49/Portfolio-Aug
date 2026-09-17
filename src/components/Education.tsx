@@ -49,7 +49,7 @@ const Education = () => {
                   {
                     name: "Desenvolvimento Full Stack",
                     institution: "INDT",
-                    status: "Cursando",
+                    status: "2026-2026",
                   },
                   {
                     name: "Flutter & Dart",

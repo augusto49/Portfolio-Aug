@@ -17,8 +17,13 @@ import {
   SiGraphql,
   SiMysql,
   SiPostgresql,
+  SiAngular,
+  SiIonic,
+  SiCapacitor,
+  SiDotnet,
+  SiOracle,
 } from "react-icons/si";
-import { TbBrandReactNative, TbApi } from "react-icons/tb";
+import { TbBrandReactNative, TbApi, TbBrandCSharp } from "react-icons/tb";
 import { DiMsqlServer } from "react-icons/di";
 
 // Map skill names to their icons and colors
@@ -43,6 +48,12 @@ const skillIcons: Record<string, { icon: React.ElementType; color: string }> = {
   MySQL: { icon: SiMysql, color: "#4479A1" },
   PostgreSQL: { icon: SiPostgresql, color: "#4169E1" },
   "SQL Server": { icon: DiMsqlServer, color: "#CC2927" },
+  Angular: { icon: SiAngular, color: "#DD0031" },
+  Ionic: { icon: SiIonic, color: "#3880FF" },
+  Capacitor: { icon: SiCapacitor, color: "#119EFF" },
+  ".NET": { icon: SiDotnet, color: "#512BD4" },
+  "C#": { icon: TbBrandCSharp, color: "#239120" },
+  Oracle: { icon: SiOracle, color: "#F80000" },
 };
 
 const skillCategories = [
@@ -53,6 +64,8 @@ const skillCategories = [
     skills: [
       { name: "Flutter/Dart", level: 90 },
       { name: "React Native", level: 75 },
+      { name: "Ionic", level: 80 },
+      { name: "Capacitor", level: 75 },
       { name: "Firebase", level: 80 },
       { name: "GetX", level: 85 },
       { name: "MobX", level: 75 },
@@ -65,6 +78,7 @@ const skillCategories = [
     color: "text-secondary",
     skills: [
       { name: "React", level: 88 },
+      { name: "Angular", level: 80 },
       { name: "TypeScript", level: 90 },
       { name: "JavaScript", level: 75 },
       { name: "Next.js", level: 67 },
@@ -79,6 +93,8 @@ const skillCategories = [
     skills: [
       { name: "Python", level: 88 },
       { name: "Django REST", level: 85 },
+      { name: ".NET", level: 80 },
+      { name: "C#", level: 80 },
       { name: "Node.js", level: 80 },
       { name: "GraphQL", level: 55 },
       { name: "REST APIs", level: 90 },
@@ -92,6 +108,7 @@ const skillCategories = [
       { name: "MySQL", level: 85 },
       { name: "PostgreSQL", level: 82 },
       { name: "SQL Server", level: 80 },
+      { name: "Oracle", level: 75 },
       { name: "Firebase", level: 88 },
     ],
   },
@@ -250,6 +267,8 @@ const Skills = () => {
                 "Git/GitHub",
                 "Docker",
                 "Deploy",
+                "Azure Pipelines",
+                "Codemagic",
                 "Pandas",
                 "UI/UX",
                 "GLPI",

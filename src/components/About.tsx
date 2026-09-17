@@ -46,44 +46,30 @@ const About = () => {
             whileHover={{ y: -5 }}
           >
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Minha jornada na programação começou durante a graduação em{" "}
-              <span className="text-primary font-semibold">
-                Engenharia da Computação
-              </span>
-              , onde descobri minha paixão por transformar ideias em soluções
-              digitais. Hoje, atuo como{" "}
-              <span className="text-secondary font-semibold">
-                desenvolvedor Full Stack
-              </span>
-              , criando soluções completas em sistemas web, mobile e backend,
-              entregando aplicações de alta qualidade para diversas plataformas.
+              Minha jornada na tecnologia começou durante a graduação em{" "}
+              <span className="text-primary font-semibold">Engenharia da Computação</span>
+              . Hoje, atuo como{" "}
+              <span className="text-secondary font-semibold">Desenvolvedor Full Stack</span>
+              , com forte especialização no ecossistema Mobile (Flutter, React Native, Ionic e Capacitor), além de uma base muito sólida em desenvolvimento Web, Backend e DevOps, entregando ecossistemas corporativos completos e de alta performance.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mt-6">
-              Ao longo dos anos, tive a oportunidade de trabalhar em projetos
-              desafiadores no{" "}
-              <span className="text-primary font-semibold">
-                Grupo Rede Amazônica
-              </span>
-              , desenvolvendo aplicativos híbridos com Flutter, sistemas web com
-              React e Django, e automatizando processos internos. Essa
-              experiência me proporcionou uma visão completa do ciclo de
-              desenvolvimento de software.
+              Ao longo da minha carreira, desenvolvi desde plataformas de jornalismo na{" "}
+              <span className="text-primary font-semibold">Rede Amazônica</span>
+              {" "}até aplicativos robustos e híbridos para grandes clientes, passando por empresas como{" "}
+              <span className="text-primary font-semibold">Hammer Consult (Samae)</span>
+              . Além do mobile, atuo na construção de APIs, portais corporativos e e-commerces (como a plataforma Nadi Embalagens), utilizando ecossistemas diversos como C# .NET, Python (Django) e Node/React.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mt-6">
-              Busco sempre{" "}
-              <span className="text-accent font-semibold">
-                código limpo, arquitetura sólida
-              </span>{" "}
-              e soluções que façam diferença no dia a dia dos usuários. Estou
-              disponível para novos desafios e projetos que me permitam crescer
-              como profissional e contribuir com resultados reais.
+              Tenho forte vivência com metodologias ágeis, esteiras de CI/CD (Azure, Codemagic) e{" "}
+              <span className="text-accent font-semibold">Clean Architecture</span>
+              . Busco sempre entregar código limpo, interfaces fluidas e arquiteturas escaláveis que resolvam problemas reais e elevem a experiência do usuário.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                value: "3+",
+                value: "6+",
                 label: "Anos de Experiência",
                 color: "text-primary",
                 delay: 0.5,
@@ -95,7 +81,7 @@ const About = () => {
                 delay: 0.6,
               },
               {
-                value: "2+",
+                value: "10+",
                 label: "Projetos Entregues",
                 color: "text-accent",
                 delay: 0.7,
