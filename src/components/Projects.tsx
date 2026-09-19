@@ -71,7 +71,7 @@ const projects = [
     description:
       "Plataforma completa para imobiliária com listagem de imóveis, busca avançada, dashboard administrativo, gestão de clientes e integração de contato.",
     image: ndutratImobiliaria,
-    liveUrl: "https://ndutraimobiliaria.com",
+    liveUrl: "https://ndutraimobiliaria.com.br",
     technologies: [
       "React",
       "TypeScript",
