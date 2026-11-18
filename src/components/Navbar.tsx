@@ -94,8 +94,8 @@ const Navbar = () => {
                 </div>
               </div>
               <span className="font-bold text-lg hidden sm:block">
-                <span className="text-primary">Khemraj</span>
-                <span className="text-muted-foreground">.dev</span>
+                <span className="text-primary">Raj</span>
+                <span className="text-muted-foreground"> • IA</span>
               </span>
             </motion.a>
 
@@ -144,7 +144,7 @@ const Navbar = () => {
                   className="bg-gradient-primary hover:opacity-90 transition-opacity"
                   onClick={() => handleNavClick("#contato")}
                 >
-                  Fale Comigo
+                  Agendar conversa
                 </Button>
               </motion.div>
             </div>
@@ -219,7 +219,7 @@ const Navbar = () => {
                       className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
                       onClick={() => handleNavClick("#contato")}
                     >
-                      Fale Comigo
+                      Agendar conversa
                     </Button>
                   </motion.div>
                 </div>

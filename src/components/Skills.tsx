@@ -1,4 +1,14 @@
-import { Code2, Database, Smartphone, Server } from "lucide-react";
+import {
+  BrainCircuit,
+  Code2,
+  Database,
+  Palette,
+  PlugZap,
+  Server,
+  Sparkles,
+  UsersRound,
+  Workflow,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
@@ -23,6 +33,12 @@ import { DiMsqlServer } from "react-icons/di";
 
 // Map skill names to their icons and colors
 const skillIcons: Record<string, { icon: React.ElementType; color: string }> = {
+  "Prompt Engineering": { icon: Sparkles, color: "#A78BFA" },
+  "IA no desenvolvimento": { icon: BrainCircuit, color: "#8B5CF6" },
+  "Integração com API de IA": { icon: PlugZap, color: "#38BDF8" },
+  "Automação com IA": { icon: Workflow, color: "#34D399" },
+  "UX/UI e Design System": { icon: Palette, color: "#F472B6" },
+  "Pesquisa com usuários": { icon: UsersRound, color: "#FBBF24" },
   "Flutter/Dart": { icon: SiFlutter, color: "#02569B" },
   "React Native": { icon: TbBrandReactNative, color: "#61DAFB" },
   Firebase: { icon: SiFirebase, color: "#FFCA28" },
@@ -46,30 +62,18 @@ const skillIcons: Record<string, { icon: React.ElementType; color: string }> = {
 };
 
 const skillCategories = [
-  {
-    title: "Mobile",
-    icon: Smartphone,
-    color: "text-primary",
-    skills: [
-      { name: "Flutter/Dart", level: 90 },
-      { name: "React Native", level: 75 },
-      { name: "Firebase", level: 80 },
-      { name: "GetX", level: 85 },
-      { name: "MobX", level: 75 },
-      { name: "Modular", level: 80 },
-    ],
-  },
+ 
   {
     title: "Frontend",
     icon: Code2,
     color: "text-secondary",
     skills: [
-      { name: "React", level: 88 },
-      { name: "TypeScript", level: 90 },
-      { name: "JavaScript", level: 75 },
-      { name: "Next.js", level: 67 },
-      { name: "HTML/CSS", level: 92 },
-      { name: "Bootstrap", level: 85 },
+      { name: "React", level: 60 },
+      { name: "TypeScript", level: 60 },
+      { name: "JavaScript", level: 60 },
+      { name: "Next.js", level: 40 },
+      { name: "HTML/CSS", level: 95 },
+      { name: "Bootstrap", level: 90 },
     ],
   },
   {
@@ -77,11 +81,11 @@ const skillCategories = [
     icon: Server,
     color: "text-accent",
     skills: [
-      { name: "Python", level: 88 },
-      { name: "Django REST", level: 85 },
-      { name: "Node.js", level: 80 },
-      { name: "GraphQL", level: 55 },
-      { name: "REST APIs", level: 90 },
+      { name: "Python", level: 60 },
+      { name: "Django REST", level: 0 },
+      { name: "Node.js", level: 50 },
+      
+      { name: "REST APIs", level: 40 },
     ],
   },
   {
@@ -89,13 +93,41 @@ const skillCategories = [
     icon: Database,
     color: "text-primary",
     skills: [
-      { name: "MySQL", level: 85 },
-      { name: "PostgreSQL", level: 82 },
-      { name: "SQL Server", level: 80 },
-      { name: "Firebase", level: 88 },
+      { name: "MySQL", level: 50 },
+      { name: "PostgreSQL", level: 50 },
+      { name: "SQL Server", level: 50 },
+      { name: "Firebase", level: 50 },
+    ],
+  },
+
+   {
+    title: "IA & Produto",
+    icon: BrainCircuit,
+    color: "text-primary",
+    skills: [
+      { name: "Prompt Engineering", level: 0 },
+      { name: "IA no desenvolvimento", level: 0 },
+      { name: "Integração com API de IA", level: 0 },
+      { name: "Automação com IA", level: 0 },
+      { name: "UX/UI e Design System", level: 70 },
+      { name: "Pesquisa com usuários", level: 70 },
     ],
   },
 ];
+
+const getSkillLevelLabel = (level: number) => {
+  if (level === 0) return "ESTAGIÁRIO";
+  if (level >= 85) return "SENIOR";
+  if (level >= 70) return "PLENO";
+  return "JR";
+};
+
+const getSkillLevelStyle = (level: number) => {
+  if (level === 0) return "bg-sky-500/15 text-sky-300 border-sky-500/30";
+  if (level >= 85) return "bg-emerald-500/15 text-emerald-400 border-emerald-500/30";
+  if (level >= 70) return "bg-violet-500/15 text-violet-300 border-violet-500/30";
+  return "bg-amber-500/15 text-amber-300 border-amber-500/30";
+};
 
 const SkillProgress = ({
   name,
@@ -111,6 +143,8 @@ const SkillProgress = ({
 
   const skillIcon = skillIcons[name];
   const IconComponent = skillIcon?.icon;
+  const levelLabel = getSkillLevelLabel(level);
+  const levelStyle = getSkillLevelStyle(level);
 
   useEffect(() => {
     if (inView) {
@@ -141,17 +175,24 @@ const SkillProgress = ({
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ delay, duration: 0.5 }}
     >
-      <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2">
+      <div className="flex justify-between items-center gap-3">
+        <div className="flex items-center gap-2 min-w-0 flex-1">
           {IconComponent && (
             <IconComponent
-              className="h-4 w-4"
+              className="h-4 w-4 flex-shrink-0"
               style={{ color: skillIcon.color }}
             />
           )}
-          <span className="text-sm font-medium">{name}</span>
+          <span className="text-sm font-medium truncate">{name}</span>
         </div>
-        <span className="text-sm font-bold text-primary">{count}%</span>
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="text-sm font-bold text-primary">{count}%</span>
+          <span
+            className={`inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] ${levelStyle}`}
+          >
+            {levelLabel}
+          </span>
+        </div>
       </div>
       <div className="h-2 bg-muted rounded-full overflow-hidden">
         <motion.div
@@ -196,7 +237,7 @@ const Skills = () => {
               animate={inView ? { y: 0, opacity: 1 } : {}}
               transition={{ delay: 0.3 }}
             >
-              Skills Técnicas
+              Stack para IA e Produtos Digitais
             </motion.h2>
             <div className="h-1 w-20 bg-gradient-primary mx-auto rounded-full" />
           </div>
@@ -247,13 +288,11 @@ const Skills = () => {
             <h3 className="text-2xl font-bold mb-4">Outras Competências</h3>
             <div className="flex flex-wrap gap-3 justify-center">
               {[
-                "Git/GitHub",
-                "Docker",
+                "Git/GitHub",                
                 "Deploy",
-                "Pandas",
-                "UI/UX",
-                "GLPI",
-                "Active Directory",
+                "Copilot",
+                "UI/UX",                
+                "Claude",
               ].map((skill, idx) => (
                 <motion.span
                   key={idx}

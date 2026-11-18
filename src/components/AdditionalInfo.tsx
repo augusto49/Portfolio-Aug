@@ -9,7 +9,7 @@ const additionalInfo = [
     items: [
       { label: "Português", value: "Nativo" },
       { label: "Inglês", value: "Leitura e escrita" },
-      { label: "Espanhol", value: "Leitura e escrita" },
+     
     ],
   },
   {
@@ -32,7 +32,7 @@ const additionalInfo = [
     icon: Palette,
     title: "Ferramentas",
     items: [
-      { label: "Design", value: "Figma, Adobe XD" },
+      { label: "Design", value: "Figma, Adobe" },
       { label: "Prototipação", value: "Experiência com UI/UX" },
     ],
   },

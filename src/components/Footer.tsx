@@ -10,7 +10,7 @@ const Footer = () => {
     },
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/khemrajuniordev",
+      href: "https://www.linkedin.com/in/khemrajunior",
       icon: Linkedin,
     },
     {
@@ -30,7 +30,7 @@ const Footer = () => {
               Khemraj Junior
             </h3>
             <p className="text-sm text-muted-foreground mt-1">
-              Desenvolvedor Full Stack & Mobile
+              Desenvolvedor Full Stack
             </p>
           </div>
 

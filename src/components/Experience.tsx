@@ -11,80 +11,75 @@ import { useInView } from "react-intersection-observer";
 
 const experiences = [
   {
-    title: "Desenvolvedor Full Stack & Mobile",
-    company: "Grupo Rede Amazônica",
-    period: "Nov/2022 - Nov/2024",
-    duration: "2 anos",
+    title: "Desenvolvedor Full Stack JR",
+    company: "Innova Plano de Saúde",
+    period: "Fev/2026 - Atual",
+    duration: "Cargo Atual",
     location: "Manaus - AM",
     description:
-      "Desenvolvimento de aplicativo híbrido Flutter/Dart com arquitetura MVC, integrando plataforma de notícias colaborativa com funcionalidades de rede social.",
+      "Desenvolvimento de soluções digitais com foco em experiência, automação e integração de sistemas, com forte atuação em frontend, backend e IA aplicada a produtos reais.",
     sections: [
+    
       {
-        title: "Desenvolvimento Mobile",
-        icon: Smartphone,
-        items: [
-          "Desenvolvimento de aplicativo híbrido com Flutter/Dart, integrando plataforma de notícias colaborativa com funcionalidades de rede social",
-          "Implementação de arquitetura MVC com gerenciamento de estado GetX",
-          "Integração com API GraphQL para consumo de dados dinâmicos",
-          "Configuração e integração do Firebase para notificações push e analytics",
-          "Integração com Google Maps API para funcionalidades de geolocalização",
-          "Responsável pela publicação e atualização nas lojas Play Store e App Store",
-        ],
-      },
-      {
-        title: "Desenvolvimento Full Stack",
+        title: "Desenvolvimento Full Stack JR",
         icon: Code2,
         items: [
-          "Desenvolvimento de backend robusto utilizando Django com arquitetura MVT",
-          "Criação de APIs REST para integração com aplicativos mobile e frontend",
-          "Desenvolvimento de frontend responsivo com React.js e Next.js",
+          "Resgate e reconstrução do portal Nativa Fácil 2.0 com React, TypeScript, Tailwind e Supabase (PostgreSQL), com deploy na Vercel",
+          "Criação de APIs REST para integração entre sistemas e frontend",
+          "Reconstrução do site institucional de WordPress para React, Vite e Supabase",
           "Automação de relatórios gerenciais utilizando Pandas e exportação para Excel",
         ],
       },
     ],
   },
+  
+    
   {
-    title: "Estagiário de Suporte T.I",
-    company: "Grupo Rede Amazônica",
-    period: "Dez/2021 - Nov/2022",
-    duration: "1 ano",
+    title: "Professor de Programação",
+    company: "CETAM - Centro de Educação Tecnológica do Amazonas",
+    period: "Jan/2025 - Dez/2025",
+    duration: "12 meses",
     location: "Manaus - AM",
     description:
-      "Suporte técnico, manutenção de equipamentos e sistemas, uso de GLPI e Active Directory.",
-    sections: [
-      {
-        title: "Responsabilidades",
-        icon: Server,
-        items: [
-          "Suporte técnico presencial e remoto aos colaboradores",
-          "Manutenção preventiva e corretiva de equipamentos de informática",
-          "Gestão de chamados através do sistema GLPI",
-          "Administração de usuários e permissões no Active Directory",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Desenvolvedor Web - Estagiário",
-    company: "Agência de Defesa Agropecuária e Florestal (ADAF)",
-    period: "Nov/2021 - Dez/2021",
-    duration: "2 meses",
-    location: "Manaus - AM",
-    description:
-      "Desenvolvimento e manutenção do site institucional, configuração de hospedagem e back-end.",
+      "Atuação no planejamento pedagógico e na ministração de aulas teóricas e práticas na área de tecnologia.",
     sections: [
       {
         title: "Responsabilidades",
         icon: Code2,
         items: [
-          "Desenvolvimento e manutenção do site institucional da ADAF",
-          "Atualização de conteúdo e implementação de novas funcionalidades",
-          "Configuração de hospedagem web e manutenção de back-end",
+          "Lógica de Programação I e II (Python): Ensino estruturado dos fundamentos do pensamento computacional, algoritmos, estruturas de controle/repetição, funções, manipulação de dados e introdução à resolução de problemas reais com Python.",
+          "Montagem e Manutenção de Computadores: Condução de laboratórios práticos focados em arquitetura de hardware, diagnóstico e reparo de defeitos, substituição de componentes, montagem de periféricos, formatação e configuração de sistemas operacionais.",
+          "Informática Básica e Produtividade: Treinamento em sistemas operacionais, navegação segura, conceitos de rede e uso das principais ferramentas de escritório e produtividade digital.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "UX UI Designer",
+    company: "CERTI AMAZONAS",
+    period: "Jan/2020 - Dez/2024",
+    duration: "4 anos",
+    location: "Manaus - AM",
+    description:
+      "Atuação no planejamento pedagógico e na ministração de aulas teóricas e práticas na área de tecnologia.",
+    sections: [
+      {
+        title: "Responsabilidades",
+        icon: Code2,
+        items: [
+          "Liderar projetos de design para plataformas web e mobile, impactando no aumento de conversões.",
+          "Conduzir pesquisas de usuários, incluindo entrevistas e testes de usabilidade, resultando em melhorias significativas no fluxo de navegação.",
+          "Criar wireframes, protótipos e interfaces completas para produtos digitais, garantindo conformidade com as melhores práticas de acessibilidade (WCAG).",
+          "Colaborar com equipes de desenvolvimento e produto em um ambiente ágil para implementar soluções otimizadas.",
+          "Desenvolver design systems escaláveis para diferentes produtos, melhorando a consistência visual em 100% das interfaces.",
+          "Participar de workshops de co-criação com clientes e stakeholders, aumentando a eficiência no alinhamento de requisitos.",
         ],
       },
     ],
   },
 ];
+
+
 
 const Experience = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });

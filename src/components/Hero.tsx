@@ -75,6 +75,10 @@ const Hero = () => {
             {/* Status Badge */}
             <AvailableStatus />
 
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary">
+              UX • Product • IA
+            </div>
+
             {/* Name and Title with Glitch Effect */}
             <div className="space-y-4">
               <motion.h1
@@ -88,7 +92,7 @@ const Hero = () => {
               <div className="h-1 w-32 bg-gradient-primary mx-auto rounded-full" />
               <p className="text-xl text-secondary">
                 <TypewriterText
-                  text="Desenvolvedor Full Stack & Mobile"
+                  text="Full Stack • IA • Produto"
                   delay={80}
                 />
               </p>
@@ -96,32 +100,22 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-base text-muted-foreground max-w-md">
-              Sou desenvolvedor Full Stack com ênfase em Mobile, com 3+ anos de
-              experiência prática em Flutter/Dart e projetos web, atuando também
-              com React Native, Next.js e backend com Python/Django e Node.js.
-              Tenho vivência em projetos completos, desde o desenvolvimento até
-              o deploy, incluindo publicação nas lojas (Play Store e App Store),
-              consumo de APIs REST e GraphQL, versionamento com Git, integração
-              com Firebase e uso de bancos relacionais.
+            Sou o Raj, desenvolvedor full stack de Manaus com foco em IA e produtos digitais. Comecei no design e passei 5 anos em UX/UI antes de migrar para o código; hoje junto as duas visões para criar experiências mais humanas e soluções com impacto real. Trabalho com React, TypeScript, Node.js e Supabase, e já resgatei e reconstruí o portal Nativa Fácil para uma operadora de saúde. Gosto de integrar sistemas, automatizar processos e explorar como a inteligência artificial pode criar valor em produtos reais.
             </p>
 
             {/* Tech Stack Badges */}
             <div className="flex flex-wrap gap-3 justify-center pt-4">
-              {[
-                "Flutter/Dart",
-                "React.js",
-                "React Native",
-                "Python/Django",
-                "Node.js",
-              ].map((tech) => (
-                <motion.span
-                  key={tech}
-                  className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium radar-pulse-button"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {tech}
-                </motion.span>
-              ))}
+              {["IA", "React", "TypeScript", "Node.js", "Supabase"].map(
+                (tech) => (
+                  <motion.span
+                    key={tech}
+                    className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium radar-pulse-button"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    {tech}
+                  </motion.span>
+                )
+              )}
             </div>
 
             {/* Action Buttons - Icon only except CV */}
@@ -248,6 +242,10 @@ const Hero = () => {
               {/* Status Badge */}
               <AvailableStatus />
 
+              <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary">
+                UX • Product • IA
+              </div>
+
               {/* Name and Title with Glitch Effect */}
               <div className="space-y-3">
                 <motion.h1
@@ -261,7 +259,7 @@ const Hero = () => {
                 <div className="h-1 w-32 bg-gradient-primary rounded-full" />
                 <p className="text-xl md:text-2xl text-secondary">
                   <TypewriterText
-                    text="Desenvolvedor Full Stack & Mobile"
+                    text="Full Stack • IA • Produto"
                     delay={80}
                   />
                 </p>
@@ -269,33 +267,30 @@ const Hero = () => {
 
               {/* Description */}
               <p className="text-lg text-muted-foreground max-w-2xl">
-                Sou desenvolvedor Full Stack com ênfase em Mobile, com 3+ anos
-                de experiência prática em Flutter/Dart e projetos web, atuando
-                também com React Native, Next.js e backend com Python/Django e
-                Node.js. Tenho vivência em projetos completos, desde o
-                desenvolvimento até o deploy, incluindo publicação nas lojas
-                (Play Store e App Store), consumo de APIs REST e GraphQL,
-                versionamento com Git, integração com Firebase e uso de bancos
-                relacionais.
+                Sou o Raj, desenvolvedor full stack de Manaus com foco em IA e
+                produtos digitais. Comecei no design e passei 5 anos em UX/UI
+                antes de migrar para o código; hoje junto as duas visões para
+                criar experiências mais humanas e soluções com impacto real.
+                Trabalho com React, TypeScript, Node.js e Supabase, e já
+                resgatei e reconstruí o portal Nativa Fácil para uma operadora
+                de saúde. Gosto de integrar sistemas, automatizar processos e
+                explorar como a inteligência artificial pode criar valor em
+                produtos reais.
               </p>
 
               {/* Tech Stack Badges */}
               <div className="flex flex-wrap gap-3 pt-4">
-                {[
-                  "Flutter/Dart",
-                  "React.js",
-                  "React Native",
-                  "Python/Django",
-                  "Node.js",
-                ].map((tech) => (
-                  <motion.span
-                    key={tech}
-                    className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium radar-pulse-button"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    {tech}
-                  </motion.span>
-                ))}
+                {["IA", "React", "TypeScript", "Node.js", "Supabase"].map(
+                  (tech) => (
+                    <motion.span
+                      key={tech}
+                      className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium radar-pulse-button"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {tech}
+                    </motion.span>
+                  )
+                )}
               </div>
 
               {/* Action Buttons - Icon only except CV */}
@@ -330,7 +325,7 @@ const Hero = () => {
                 {/* Email Button */}
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <a href="#contato">
+                    <a href="mailto:khemrajuniordev@gmail.com">
                       <motion.div
                         whileHover={{ scale: 1.1, y: -2 }}
                         whileTap={{ scale: 0.95 }}
@@ -354,7 +349,7 @@ const Hero = () => {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a
-                      href="https://www.linkedin.com/in/khemrajuniordev"
+                      href="https://www.linkedin.com/in/khemrajunior"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -401,11 +396,11 @@ const Hero = () => {
               {/* Contact Info */}
               <div className="flex gap-6 pt-4 text-muted-foreground">
                 <a
-                  href="tel:+5592992107783"
+                  href="tel:+559284099339"
                   className="flex items-center gap-2 hover:text-foreground transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  <span className="text-sm">(92) 9 9210-7783</span>
+                  <span className="text-sm">+55 92 9 8409-9339</span>
                 </a>
                 <a
                   href="mailto:khemrajuniordev@gmail.com"

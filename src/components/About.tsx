@@ -45,60 +45,65 @@ const About = () => {
             transition={{ delay: 0.4 }}
             whileHover={{ y: -5 }}
           >
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Minha jornada na programação começou durante a graduação em{" "}
-              <span className="text-primary font-semibold">
-                Engenharia da Computação
-              </span>
-              , onde descobri minha paixão por transformar ideias em soluções
-              digitais. Hoje, atuo como{" "}
-              <span className="text-secondary font-semibold">
-                desenvolvedor Full Stack
-              </span>
-              , criando soluções completas em sistemas web, mobile e backend,
-              entregando aplicações de alta qualidade para diversas plataformas.
-            </p>
-            <p className="text-lg leading-relaxed text-muted-foreground mt-6">
-              Ao longo dos anos, tive a oportunidade de trabalhar em projetos
-              desafiadores no{" "}
-              <span className="text-primary font-semibold">
-                Grupo Rede Amazônica
-              </span>
-              , desenvolvendo aplicativos híbridos com Flutter, sistemas web com
-              React e Django, e automatizando processos internos. Essa
-              experiência me proporcionou uma visão completa do ciclo de
-              desenvolvimento de software.
-            </p>
-            <p className="text-lg leading-relaxed text-muted-foreground mt-6">
-              Busco sempre{" "}
-              <span className="text-accent font-semibold">
-                código limpo, arquitetura sólida
-              </span>{" "}
-              e soluções que façam diferença no dia a dia dos usuários. Estou
-              disponível para novos desafios e projetos que me permitam crescer
-              como profissional e contribuir com resultados reais.
-            </p>
+           <p className="text-lg leading-relaxed text-muted-foreground">
+  Minha jornada na tecnologia começou no{" "}
+  <span className="text-primary font-semibold">design</span>. Formado em
+  Design Gráfico, passei 5 anos em UX/UI, onde aprendi a pensar em quem usa o
+  produto, e foi trabalhando ao lado de equipes de engenharia que descobri
+  minha paixão por transformar ideias em soluções digitais. Hoje, curso
+  Análise e Desenvolvimento de Sistemas e atuo como{" "}
+  <span className="text-secondary font-semibold">
+    desenvolvedor Full Stack
+  </span>
+  , com foco em <span className="text-primary font-semibold">IA</span>, integração de sistemas e automação de processos que
+  entregam valor real para usuários e negócios.
+</p>
+<p className="text-lg leading-relaxed text-muted-foreground mt-6">
+  Nos últimos anos, trabalhei em projetos desafiadores, como o resgate e a
+  reconstrução do portal{" "}
+  <span className="text-primary font-semibold">Nativa Fácil</span>, de uma
+  operadora de saúde, com React, TypeScript e Supabase, além de integrações
+  com <span className="text-secondary font-semibold">ERPs por API</span> e automações com Python. Também fui instrutor de
+  programação, o que me ensinou a explicar e documentar o que construo. Essa
+  vivência me deu uma visão completa do ciclo de criação de software, do
+  design ao deploy.
+</p>
+<p className="text-lg leading-relaxed text-muted-foreground mt-6">
+  Busco sempre{" "}
+  <span className="text-accent font-semibold">
+    código limpo, interfaces claras
+  </span>{" "}
+  e soluções que unam tecnologia, boa experiência de uso e impacto. Estou
+  aberto a novos desafios que envolvam IA, automação e desenvolvimento de
+  produtos digitais com propósito.
+</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
             {[
               {
-                value: "3+",
-                label: "Anos de Experiência",
+                value: "1+",
+                label: "Ano de Experiência com FullStack",
                 color: "text-primary",
                 delay: 0.5,
               },
               {
-                value: "15+",
-                label: "Tecnologias",
+                value: "5+",
+                label: "Anos de Experiência com UX/UI",
                 color: "text-secondary",
                 delay: 0.6,
               },
               {
-                value: "2+",
-                label: "Projetos Entregues",
+                value: "15+",
+                label: "Tecnologias",
                 color: "text-accent",
                 delay: 0.7,
+              },
+              {
+                value: "3+",
+                label: "Projetos Entregues",
+                color: "text-primary",
+                delay: 0.8,
               },
             ].map((stat, idx) => (
               <motion.div

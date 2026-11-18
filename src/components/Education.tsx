@@ -24,13 +24,13 @@ const Education = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2">
-                    Engenharia da Computação
+                    Análisie e Desenvolvimento de Sistemas - ADS
                   </h3>
                   <p className="text-lg mb-1">
-                    UniNorte - Centro Universitário do Norte
+                    Unifavip Wyden - Manaus, AM
                   </p>
                   <p className="text-sm opacity-90">
-                    Concluído em Dezembro de 2023
+                    Em andamento (2025 - 2027)
                   </p>
                 </div>
               </div>
@@ -48,28 +48,28 @@ const Education = () => {
                 {[
                   {
                     name: "Desenvolvimento Full Stack",
-                    institution: "INDT",
+                    institution: "BOOTCAMP 1000DEVS",
                     status: "Cursando",
                   },
                   {
-                    name: "Flutter & Dart",
-                    institution: "Udemy",
-                    status: "2022-2023",
+                    name: "Desenvolvimento Full Stack",
+                    institution: "TICKHUB",
+                    status: "2026-2026",
                   },
                   {
                     name: "Desenvolvimento Python",
                     institution: "Udemy",
-                    status: "2022",
+                    status: "2025",
                   },
                   {
                     name: "Desenvolvimento Web (HTML/CSS/JS)",
-                    institution: "Udemy",
-                    status: "2021-2022",
+                    institution: "DEVSESTEPHEN",
+                    status: "2025-2025",
                   },
                   {
-                    name: "React Native",
-                    institution: "Instituto Eldorado",
-                    status: "2021-2022",
+                    name: "Git Github",
+                    institution: "DEVSESTEPHEN",
+                    status: "2025-2025",
                   },
                 ].map((course, idx) => (
                   <div

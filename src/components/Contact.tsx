@@ -48,10 +48,10 @@ const Contact = () => {
                     <div className="flex-1">
                       <h3 className="font-semibold mb-1">Telefone</h3>
                       <a
-                        href="tel:+5592992107783"
+                        href="tel:+559284099339"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        + 55 (92) 9 9210-7783
+                        +55 92 9 8409-9339
                       </a>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                   </a>
 
                   <a
-                    href="https://www.linkedin.com/in/khemrajuniordev"
+                    href="https://www.linkedin.com/in/khemrajunior"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"
@@ -112,7 +112,7 @@ const Contact = () => {
                 </div>
 
                 <div className="pt-6 text-sm opacity-75">
-                  <p>24 anos • CNH B</p>
+                  <p>41 anos • CNH B</p>
                 </div>
               </div>
             </div>
