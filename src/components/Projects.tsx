@@ -13,14 +13,25 @@ import {
   SiFirebase,
   SiGraphql,
   SiGooglemaps,
+  SiTailwindcss,
+  SiVite,
+  SiWordpress,
+  SiSupabase,
 } from "react-icons/si";
 import ndutratImobiliaria from "@/assets/ndutra-imobiliaria.png";
 import euAmazonia from "@/assets/eu-amazonia.png";
+import crmOperadoraSaude from "@/assets/crm-operadora-saude.png";
+import innovaSaude from "@/assets/innova-saude.png";
+import nativaFacil from "@/assets/nativa-facil.jpg";
 
 // Map technology names to their icons and colors
 const techIcons: Record<string, { icon: React.ElementType; color: string }> = {
   React: { icon: SiReact, color: "#61DAFB" },
   TypeScript: { icon: SiTypescript, color: "#3178C6" },
+  "Tailwind CSS": { icon: SiTailwindcss, color: "#06B6D4" },
+  Supabase: { icon: SiSupabase, color: "#3ECF8E" },
+  Vite: { icon: SiVite, color: "#646CFF" },
+  WordPress: { icon: SiWordpress, color: "#21759B" },
   Python: { icon: SiPython, color: "#3776AB" },
   Django: { icon: SiDjango, color: "#092E20" },
   "Django REST": { icon: SiDjango, color: "#092E20" },
@@ -33,6 +44,63 @@ const techIcons: Record<string, { icon: React.ElementType; color: string }> = {
 };
 
 const projects = [
+  {
+    title: "Innova Plano de Saúde",
+    subtitle: "Migração WordPress para React & Rede de Atendimento",
+    description:
+      "Modernização completa da plataforma migrada de WordPress para React e banco de dados Supabase. Desenvolvimento da nova Rede de Atendimento com filtros avançados de busca e melhorias significativas de UX nos cards credenciados.",
+    image: innovaSaude,
+    liveUrl: "https://www.innovaoperadora.com.br/",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase", "WordPress"],
+    features: [
+      "Migração e modernização de WordPress para React",
+      "Banco de dados relacional e integração com Supabase",
+      "Rede de atendimento com busca e filtros dinâmicos",
+      "Melhorias na experiência do usuário (UX) e nos cards",
+      "Otimização de performance e velocidade de carregamento",
+      "Cotação online e portais integrados",
+    ],
+    type: "Emprego",
+    year: "2026",
+  },
+  {
+    title: "Nativa Fácil",
+    subtitle: "Portal do Cliente & Dashboard Administrativo",
+    description:
+      "Resgate e reconstrução completa da plataforma com React, TypeScript, Tailwind e Supabase. Painel administrativo em tempo real para controle de clientes, faturamento, recebimento, emissão de boletos e carteirinhas digitais.",
+    image: nativaFacil,
+    liveUrl: "https://portal.nativafacil.com.br/",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase", "Vite"],
+    features: [
+      "Dashboard administrativo com métricas e faturamento em tempo real",
+      "Autenticação e banco de dados relacional com Supabase",
+      "Gráficos dinâmicos de inadimplência e evolução financeira",
+      "Gestão de clientes, administradores e carteirinhas digitais",
+      "Módulo financeiro com boletos e informes de rendimentos",
+      "Interface moderna com tema escuro (Dark Mode) de alta performance",
+    ],
+    type: "Emprego",
+    year: "2026",
+  },
+  {
+    title: "CRM Operadora de Saúde",
+    subtitle: "Gestão de Atendimento Médico e Financeiro",
+    description:
+      "Plataforma completa de CRM para operadoras de saúde centralizando atendimento médico, triagem de enfermagem integrada, controle financeiro, gestão de solicitações e alertas de consultas.",
+    image: crmOperadoraSaude,
+    liveUrl: "https://crmoperadorasaude.vercel.app/",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    features: [
+      "Centralização de solicitações e pagamentos",
+      "Triagem de enfermagem integrada",
+      "Visibilidade financeira e autorizações",
+      "Alertas de consultas e vencimentos",
+      "Dashboard com indicadores e métricas",
+      "Design responsivo e interface moderna",
+    ],
+    type: "Freelancer",
+    year: "2024",
+  },
   {
     title: "Ndutra Imobiliária",
     subtitle: "Sistema Imobiliário Completo",
@@ -115,7 +183,7 @@ const Projects = () => {
               animate={inView ? { y: 0, opacity: 1 } : {}}
               transition={{ delay: 0.3 }}
             >
-              Projetos Freelancer
+              Projetos em Destaque
             </motion.h2>
             <div className="h-1 w-20 bg-gradient-primary mx-auto rounded-full" />
             <motion.p
@@ -124,12 +192,12 @@ const Projects = () => {
               animate={inView ? { y: 0, opacity: 1 } : {}}
               transition={{ delay: 0.4 }}
             >
-              Projetos desenvolvidos de forma independente para clientes
+              Projetos desenvolvidos profissionalmente em empresas e como freelancer
             </motion.p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {projects.map((project, idx) => (
               <motion.div
                 key={idx}
